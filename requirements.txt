@@ -8,3 +8,4 @@ torch==2.0.0
 torchvision==0.15.0
 tqdm==4.66.4
 wandb==0.17.0
+sigpy==0.1.26
