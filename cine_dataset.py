@@ -57,11 +57,11 @@ class CineDataset_Task2_Test_F(Dataset):
     
     def ifft2c(self, kspace):
         axes = (-2, -1)
-        return fftshift(fft2(ifftshift(kspace, axes=axes), axes=axes, norm='ortho'), axes=axes)
+        return fftshift(ifft2(ifftshift(kspace, axes=axes), axes=axes, norm='ortho'), axes=axes)
 
     def fft2c(self, img):
         axes = (-2, -1)
-        return fftshift(ifft2(ifftshift(img, axes=axes), axes=axes, norm='ortho'), axes=axes)
+        return fftshift(fft2(ifftshift(img, axes=axes), axes=axes, norm='ortho'), axes=axes)
     
     def norm(self, kspace):
         img = self.ifft2c(kspace)
